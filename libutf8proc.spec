@@ -10,7 +10,7 @@ Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	2782ab67e722f6f61ba263f9ef5b858c
+# Source0-md5:	8eba1b4145b8fd01252ecb7d7a710d65
 URL:		http://www.netsurf-browser.org/projects/libutf8proc/
 BuildRequires:	netsurf-buildsystem >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
