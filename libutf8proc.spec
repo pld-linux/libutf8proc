@@ -2,8 +2,8 @@
 # Conditional build:
 %bcond_without	static_libs	# don't build static library
 
-Summary:	libutf8proc
-Summary(pl.UTF-8):	Biblioteka libutf8proc
+Summary:	utf8proc library for NetSurf
+Summary(pl.UTF-8):	Biblioteka utf8proc dla projektu NetSurf
 Name:		libutf8proc
 Version:	1.1.6
 Release:	1
@@ -16,17 +16,33 @@ BuildRequires:	netsurf-buildsystem >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is the Public software group utf8proc library [1] repackaged as a
+This is the Public Software Group utf8proc library [1] repackaged as a
 conveniance library for NetSurf. Previously this library was simply
 copied into the NetSurf sources.
 
-This takes the unicode 5 capable version 1.1.6 of the library and
-converts it to the NetSurf build system. additional API has been added
+This takes the Unicode 5 capable version 1.1.6 of the library and
+converts it to the NetSurf build system. Additional API has been added
 with a normalisation function but there are no data changes from
 upstream.
 
 All the Makefiles and changes are licenced as per the utf8proc
 source using the MIT "expat" licence.
+
+[1] http://www.public-software-group.org/utf8proc
+
+%description -l pl.UTF-8
+Ten pakiet zawiera bibliotekę utf8proc [1] opublikowaną przez Public
+Software Group, przepakowaną jako bibliotekę pomocniczą dla projektu
+NetSuft. Wcześniej biblioteka była po prostu skopiowana do źródeł
+NetSurfa.
+
+Pakiet zawiera wersję 1.1.6 biblioteki z obsługą Unicode 5,
+przekształconą do systemu budowania NetSurfa. Zostało dodane dodatkowe
+API z funkcją normalizującą, ale nie ma zmian w danych w stosunku do
+wersji oryginalnej.
+
+Wszystkie pliki Makefile oraz zmiany są licencjonowane tak samo, jak
+źródła biblioteki utf8proc, z użyciem licencji MIT w wersji "expat".
 
 [1] http://www.public-software-group.org/utf8proc
 
@@ -41,8 +57,8 @@ This package contains the include files and other resources you can
 use to incorporate libutf8proc into applications.
 
 %description devel -l pl.UTF-8
-Pliki nagłówkowe pozwalające na używanie biblioteki libutf8proc w swoich
-programach.
+Pliki nagłówkowe pozwalające na używanie biblioteki libutf8proc w
+swoich programach.
 
 %package static
 Summary:	libutf8proc static library
