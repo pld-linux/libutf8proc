@@ -5,14 +5,14 @@
 Summary:	utf8proc library for NetSurf
 Summary(pl.UTF-8):	Biblioteka utf8proc dla projektu NetSurf
 Name:		libutf8proc
-Version:	1.1.6
+Version:	1.3.1
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-src.tar.gz
-# Source0-md5:	8eba1b4145b8fd01252ecb7d7a710d65
+# Source0-md5:	6129d59ca2ddab37ee28314a57577f44
 URL:		http://www.netsurf-browser.org/projects/libutf8proc/
-BuildRequires:	netsurf-buildsystem >= 1.3
+BuildRequires:	netsurf-buildsystem >= 1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -76,6 +76,7 @@ Statyczna biblioteka libutf8proc.
 %setup -q
 
 %build
+export AR="%{__ar}"
 export CC="%{__cc}"
 export CFLAGS="%{rpmcflags}"
 export LDFLAGS="%{rpmldflags}"
@@ -93,6 +94,11 @@ export LDFLAGS="%{rpmldflags}"
 %endif
 
 %install
+export AR="%{__ar}"
+export CC="%{__cc}"
+export CFLAGS="%{rpmcflags}"
+export LDFLAGS="%{rpmldflags}"
+
 rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	PREFIX=%{_prefix} \
@@ -116,7 +122,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changelog LICENSE
+%doc LICENSE.md NEWS.md README.md 
 %attr(755,root,root) %{_libdir}/libutf8proc.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libutf8proc.so.1
 
