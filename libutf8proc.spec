@@ -6,11 +6,12 @@ Summary:	utf8proc library for NetSurf
 Summary(pl.UTF-8):	Biblioteka utf8proc dla projektu NetSurf
 Name:		libutf8proc
 Version:	1.3.1
-Release:	3
+Release:	4
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-3-src.tar.gz
 # Source0-md5:	c427797a2e3172a0ebef68b37b682124
+Patch0:		%{name}-build.patch
 URL:		http://www.netsurf-browser.org/projects/libutf8proc/
 BuildRequires:	netsurf-buildsystem >= 1.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -74,6 +75,7 @@ Statyczna biblioteka libutf8proc.
 
 %prep
 %setup -q -n %{name}-%{version}-3
+%patch0 -p1
 
 %build
 export AR="%{__ar}"
@@ -115,8 +117,6 @@ export LDFLAGS="%{rpmldflags}"
 	DESTDIR=$RPM_BUILD_ROOT
 %endif
 
-sed -i -e 's#includedir=.*#includedir=${prefix}/include/%{name}#g' $RPM_BUILD_ROOT%{_pkgconfigdir}/libutf8proc.pc
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -132,7 +132,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libutf8proc.so
-%{_includedir}/libutf8proc
+%{_includedir}/utf8proc.h
 %{_pkgconfigdir}/libutf8proc.pc
 
 %if %{with static_libs}
