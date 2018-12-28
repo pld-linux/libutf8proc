@@ -21,7 +21,7 @@ This is the Public Software Group utf8proc library [1] repackaged as a
 conveniance library for NetSurf. Previously this library was simply
 copied into the NetSurf sources.
 
-This takes the Unicode 5 capable version 1.1.6 of the library and
+This takes the Unicode 11 capable version 2.2.0 of the library and
 converts it to the NetSurf build system. Additional API has been added
 with a normalisation function but there are no data changes from
 upstream.
@@ -37,7 +37,7 @@ Software Group, przepakowaną jako bibliotekę pomocniczą dla projektu
 NetSuft. Wcześniej biblioteka była po prostu skopiowana do źródeł
 NetSurfa.
 
-Pakiet zawiera wersję 1.1.6 biblioteki z obsługą Unicode 5,
+Pakiet zawiera wersję 2.2.0 biblioteki z obsługą Unicode 11,
 przekształconą do systemu budowania NetSurfa. Zostało dodane dodatkowe
 API z funkcją normalizującą, ale nie ma zmian w danych w stosunku do
 wersji oryginalnej.
@@ -125,7 +125,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE.md NEWS.md README.md 
+%doc LICENSE.md NEWS.md README README.md
 %attr(755,root,root) %{_libdir}/libutf8proc.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libutf8proc.so.2
 
