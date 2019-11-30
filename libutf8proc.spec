@@ -5,12 +5,12 @@
 Summary:	utf8proc library for NetSurf
 Summary(pl.UTF-8):	Biblioteka utf8proc dla projektu NetSurf
 Name:		libutf8proc
-Version:	2.2.0
+Version:	2.4.0
 Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://download.netsurf-browser.org/libs/releases/%{name}-%{version}-1-src.tar.gz
-# Source0-md5:	34be57865dc535656692d5c636049bf1
+# Source0-md5:	1beb803edde514c4cdd88707c0f6830b
 Patch0:		%{name}-build.patch
 URL:		http://www.netsurf-browser.org/projects/libutf8proc/
 BuildRequires:	netsurf-buildsystem >= 1.7
@@ -21,10 +21,8 @@ This is the Public Software Group utf8proc library [1] repackaged as a
 conveniance library for NetSurf. Previously this library was simply
 copied into the NetSurf sources.
 
-This takes the Unicode 11 capable version 2.2.0 of the library and
-converts it to the NetSurf build system. Additional API has been added
-with a normalisation function but there are no data changes from
-upstream.
+This takes the Unicode 12.1 capable version 2.4.0 of the library and
+converts it to the NetSurf build system.
 
 All the Makefiles and changes are licenced as per the utf8proc
 source using the MIT "expat" licence.
@@ -37,10 +35,8 @@ Software Group, przepakowaną jako bibliotekę pomocniczą dla projektu
 NetSuft. Wcześniej biblioteka była po prostu skopiowana do źródeł
 NetSurfa.
 
-Pakiet zawiera wersję 2.2.0 biblioteki z obsługą Unicode 11,
-przekształconą do systemu budowania NetSurfa. Zostało dodane dodatkowe
-API z funkcją normalizującą, ale nie ma zmian w danych w stosunku do
-wersji oryginalnej.
+Pakiet zawiera wersję 2.4.0 biblioteki z obsługą Unicode 12.1
+przekształconą do systemu budowania NetSurfa.
 
 Wszystkie pliki Makefile oraz zmiany są licencjonowane tak samo, jak
 źródła biblioteki utf8proc, z użyciem licencji MIT w wersji "expat".
