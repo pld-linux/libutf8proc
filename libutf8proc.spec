@@ -71,7 +71,7 @@ Statyczna biblioteka libutf8proc.
 
 %prep
 %setup -q -n %{name}-%{version}-1
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 export AR="%{__ar}"
